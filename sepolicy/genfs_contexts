@@ -1,3 +1,7 @@
+# Bluetooth
+genfscon sysfs /devices/vendor/vendor:bt_qca6174/extldo                 u:object_r:sysfs_bluetooth_writable:s0
+genfscon sysfs /devices/vendor/vendor:bt_qca6174/rfkill/rfkill0/state   u:object_r:sysfs_bluetooth_writable:s0
+
 # Fingerprint
 genfscon sysfs /devices/soc/soc:fpc_fpc1020         u:object_r:sysfs_fpc:s0
 
@@ -7,11 +11,20 @@ genfscon sysfs /devices/soc/qpnp-fg-17/power_supply/bms                 u:object
 genfscon sysfs /devices/soc/qpnp-smbcharger-16/power_supply/battery     u:object_r:sysfs_battery_supply:s0
 genfscon sysfs /devices/soc/qpnp-smbcharger-16/power_supply/dc          u:object_r:sysfs_battery_supply:s0
 genfscon sysfs /devices/soc/soc:qcom,bcl/power_supply/bcl/type          u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:bcl@4200/power_supply/fg_adc/type u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,fg/power_supply/bms u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,qpnp-smbcharger/power_supply/battery u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,qpnp-smbcharger/power_supply/dc u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,qpnp-smbcharger/power_supply/usb u:object_r:sysfs_battery_supply:s0
 
 # LEDs
 genfscon sysfs /devices/soc/leds-qpnp-18/leds       u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/soc/leds-qpnp-24/leds       u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/soc/leds-qpnp-25/leds       u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,leds@a300/leds u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,leds@d000/leds u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,leds@d300/leds u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,haptics@c000/leds/vibrator u:object_r:sysfs_vibrator:s0
 
 # LiveDisplay
 genfscon sysfs /devices/virtual/graphics/fb0/dci_p3 u:object_r:sysfs_livedisplay_tuneable:s0
