@@ -1,6 +1,6 @@
-sys.qcom.thermalcfg                 u:object_r:thermal_prop:s0
-ctl.thermal-engine                  u:object_r:thermal_prop:s0
+sys.qcom.thermalcfg                 u:object_r:vendor_thermal_prop:s0
 vendor.min_freq_0                   u:object_r:vendor_mpctl_prop:s0
 vendor.min_freq_4                   u:object_r:vendor_mpctl_prop:s0
 wifi.active.interface               u:object_r:wifi_prop:s0
-persist.vendor.wigig.npt.enable     u:object_r:vendor_default_prop:s0
+dual.camera.cs.br                   u:object_r:camera_prop:s0
+persist.camera.                     u:object_r:camera_prop:s0
