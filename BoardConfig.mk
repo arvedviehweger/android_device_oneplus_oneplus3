@@ -21,8 +21,6 @@
 # definition file).
 #
 
-# Inherit from oppo-common
--include device/oppo/common/BoardConfigCommon.mk
 
 PLATFORM_PATH := device/oneplus/oneplus3
 
@@ -197,14 +195,12 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_op3
-TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
 
 # SELinux
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(PLATFORM_PATH)/sepolicy/public
-BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
