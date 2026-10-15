@@ -199,9 +199,8 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch-service.oneplus
+    vendor.lineage.touch-service.oneplus3
 
-$(call soong_config_set,ONEPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(LOCAL_PATH)/touch)
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -215,7 +214,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service
+    android.hardware.biometrics.fingerprint@2.1-service \
+    vendor.oneplus.fingerprint.extension@1.0.vendor
 
 # Gatekeeper
 PRODUCT_PACKAGES += \

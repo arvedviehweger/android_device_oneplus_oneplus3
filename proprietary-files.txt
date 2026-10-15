@@ -517,9 +517,9 @@ vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
 vendor/lib/libwvhidl.so;DISABLE_DEPS
 
 # Fingerprint sensor
-lib64/fp_hal_extension.so;DISABLE_DEPS
-lib64/hw/fingerprint.msm8996.so
-lib64/lib_fpc_tac_shared.so
+lib64/fp_hal_extension.so:vendor/lib64/fp_hal_extension.so;DISABLE_DEPS
+lib64/hw/fingerprint.msm8996.so:vendor/lib64/hw/fingerprint.msm8996.so;DISABLE_DEPS
+lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so;DISABLE_DEPS
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8996.so;DISABLE_DEPS
