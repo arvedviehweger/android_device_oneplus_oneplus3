@@ -21,7 +21,6 @@
 # definition file).
 #
 
-
 PLATFORM_PATH := device/oneplus/oneplus3
 
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
@@ -49,12 +48,14 @@ TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := kryo
+TARGET_CPU_VARIANT_RUNTIME := kryo
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := kryo
+TARGET_2ND_CPU_VARIANT_RUNTIME := kryo
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff loop.max_part=7
@@ -119,7 +120,6 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # CNE and DPM
-BOARD_USES_QCNE := true
 
 # Display
 BOARD_USES_ADRENO := true
@@ -130,11 +130,8 @@ TARGET_USES_OVERLAY := true
 USE_OPENGL_RENDERER := true
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
-OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
-VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
-SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
 TARGET_USES_HWC2 := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_QCOM_DISPLAY_BSP := true
@@ -183,6 +180,11 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3154116608
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 57436708864
 BOARD_FLASH_BLOCK_SIZE := 262144
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /mnt/vendor/persist:/persist \
+    /vendor/dsp:/dsp \
+    /vendor/firmware_mnt:/firmware \
+    /vendor/bt_firmware:/bt_firmware
 TARGET_USES_MKE2FS := true
 
 # Power
@@ -190,6 +192,7 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 TARGET_USES_INTERACTION_BOOST := true
 
 # RIL
+ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_RIL_VARIANT := caf
 TARGET_USES_OLD_MNC_FORMAT := true
 
@@ -207,15 +210,10 @@ include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
-# Thermal
-USE_DEVICE_SPECIFIC_THERMAL := true
-
 # Treble
-#PRODUCT_FULL_TREBLE_OVERRIDE := true
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+BOARD_VNDK_VERSION := current
 PRODUCT_VENDOR_MOVE_ENABLED := true
-
-# Vr
-USE_DEVICE_SPECIFIC_VR := true
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
@@ -230,6 +228,11 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WIFI_AVOID_IFACE_RESET_MAC_CHANGE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+HOSTAPD_VERSION := VER_0_8_X
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
 # inherit from the proprietary version
 -include vendor/oneplus/oneplus3/BoardConfigVendor.mk
+
+# Verified Boot
+BOARD_AVB_ENABLE := false

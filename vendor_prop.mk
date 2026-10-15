@@ -47,3 +47,61 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.qti.va_aosp.support=1 \
     ro.vendor.qti.va_odm.support=1 \
     ro.vendor.sensors.smd=false
+
+# Graphics
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.gralloc.gfx_ubwc_disable=0 \
+    debug.renderengine.backend=threaded \
+    ro.hardware.egl=adreno \
+    vendor.display.disable_rotator_split=1 \
+    vendor.display.disable_scaler=1
+
+# Bluetooth
+PRODUCT_VENDOR_PROPERTIES += \
+    bluetooth.device.class_of_device=90,2,12 \
+    bluetooth.hardware.power.operating_voltage_mv=3300 \
+    bluetooth.le.disable_apcf_extended_features=1 \
+    qcom.bluetooth.soc=rome
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    bluetooth.profile.a2dp.source.enabled?=true \
+    bluetooth.profile.asha.central.enabled?=true \
+    bluetooth.profile.avrcp.target.enabled?=true \
+    bluetooth.profile.bas.client.enabled?=true \
+    bluetooth.profile.gatt.enabled?=true \
+    bluetooth.profile.hfp.ag.enabled?=true \
+    bluetooth.profile.hid.device.enabled?=true \
+    bluetooth.profile.hid.host.enabled?=true \
+    bluetooth.profile.map.server.enabled?=true \
+    bluetooth.profile.opp.enabled?=true \
+    bluetooth.profile.pan.nap.enabled?=true \
+    bluetooth.profile.pan.panu.enabled?=true \
+    bluetooth.profile.pbap.server.enabled?=true \
+    bluetooth.profile.sap.server.enabled?=true
+
+# LMK
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.lmk.critical=0 \
+    ro.lmk.critical_upgrade=false \
+    ro.lmk.downgrade_pressure=100 \
+    ro.lmk.kill_heaviest_task=true \
+    ro.lmk.kill_timeout_ms=100 \
+    ro.lmk.low=1001 \
+    ro.lmk.medium=800 \
+    ro.lmk.upgrade_pressure=100 \
+    ro.lmk.use_minfree_levels=true
+
+# SoC
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.soc.manufacturer=Qualcomm \
+    ro.soc.model=MSM8996
+
+# Telephony
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.radio.mt_sms_ack=30 \
+    ro.telephony.block_binder_thread_on_incoming_calls=false \
+    ro.telephony.call_ring.multiple=false
+
+# Wi-Fi
+PRODUCT_VENDOR_PROPERTIES += \
+    wifi.interface=wlan0
