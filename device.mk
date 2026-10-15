@@ -196,6 +196,12 @@ PRODUCT_PACKAGES += \
     qdcm_calib_data_samsung_s6e3fa3_1080p_cmd_mode_dsi_panel.xml \
     qdcm_calib_data_samsung_s6e3fa5_1080p_cmd_mode_dsi_panel.xml
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch-service.oneplus
+
+$(call soong_config_set,ONEPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(LOCAL_PATH)/touch)
+
 # Doze
 PRODUCT_PACKAGES += \
     OnePlusDoze
@@ -217,6 +223,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl-qti \
     libgnss \
     libgnsspps \
     libsensorndkbridge

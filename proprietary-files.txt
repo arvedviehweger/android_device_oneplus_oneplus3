@@ -658,7 +658,7 @@ vendor/lib/libvqzip.so;DISABLE_DEPS|24e5eb30e5a2cdb544c8688d81d7cc75a1d85eaf
 -vendor/lib64/libgpustats.so;DISABLE_DEPS|a899ae72983277442cdacf8f43271986c91ce710
 
 # NFC firmware
-vendor/lib/libpn548ad_fw.so
+vendor/lib/libpn548ad_fw.so:vendor/lib64/libpn548ad_fw.so
 
 # Perf
 vendor/bin/energy-awareness;DISABLE_DEPS

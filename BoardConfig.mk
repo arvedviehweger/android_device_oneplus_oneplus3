@@ -202,12 +202,6 @@ include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
-# Shims
-TARGET_LD_SHIM_LIBS := \
-    /system/lib/libui.so|libui_shim.so \
-    /system/lib64/libui.so|libui_shim.so \
-    /system/product/lib64/libdpmframework.so|libcutils_shim.so
-
 # Thermal
 USE_DEVICE_SPECIFIC_THERMAL := true
 
