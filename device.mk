@@ -225,6 +225,7 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl-qti \
+    android.hardware.gnss@1.1.vendor \
     libgnss \
     libgnsspps \
     libsensorndkbridge
@@ -338,7 +339,9 @@ PRODUCT_COPY_FILES += \
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
-    libprotobuf-cpp-lite-vendorcompat
+    libprotobuf-cpp-lite-vendorcompat \
+    libprotobuf-cpp-full-v29 \
+    libprotobuf-cpp-lite-v29
 
 # QMI
 PRODUCT_PACKAGES += \

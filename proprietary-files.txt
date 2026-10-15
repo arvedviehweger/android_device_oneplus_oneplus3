@@ -35,10 +35,6 @@ vendor/lib/rfsa/adsp/libvpp_frc.so;DISABLE_DEPS
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so;DISABLE_DEPS
 
 # Alipay
--priv-app/IFAAService/IFAAService.apk
-lib64/vendor.oneplus.hardware.ifaa@2.0.so;DISABLE_DEPS
-vendor/bin/hw/vendor.oneplus.hardware.ifaa@2.0-service;DISABLE_DEPS
-vendor/etc/init/vendor.oneplus.hardware.ifaa@2.0-service.rc
 
 # ANT+ - system - from miui_DAISYGlobal_V11.0.2.0.QDLMIXM_d59f395371_10.0
 -lib/libantradio.so;DISABLE_DEPS|76795ae01c5a1d4f8e15ebc1ff8a7f6282cd6797
@@ -571,7 +567,6 @@ vendor/lib/egl/libq3dtools_adreno.so;DISABLE_DEPS;DISABLE_CHECKELF|b4b7bda387620
 vendor/lib/egl/libq3dtools_esx.so;DISABLE_DEPS;DISABLE_CHECKELF|1972c5a7747579d14519681855e6bc4e424fc7f0
 vendor/lib/egl/libQTapGLES.so;DISABLE_DEPS|957d9c98f3c29e7bf1da02fedac0789ada49dc70
 vendor/lib/libadreno_utils.so;DISABLE_DEPS|3a09e6720121f5b459a1fc7f9639b632da5832ec
-vendor/lib/libbccQTI.so;DISABLE_DEPS|124156259b7900ac44c48dd9cf83b210d02d8c9d
 vendor/lib/libC2D2.so;DISABLE_DEPS|c04a5ac1e576f63ebe91aba14bf917ee9e382be0
 vendor/lib/libc2d30_bltlib.so;DISABLE_DEPS;DISABLE_CHECKELF|4a486823ef2a9ea14f4f02c9eb9053ac5fb028af
 vendor/lib/libCB.so;DISABLE_DEPS;DISABLE_CHECKELF|15986a50f98c979833e5d651eedcffaf19e54e3b
@@ -580,9 +575,6 @@ vendor/lib/libhdr_tm.so;DISABLE_DEPS|4c371d0931245a65d0b4df768de8837bbdf4832e
 vendor/lib/libllvm-glnext.so;DISABLE_DEPS|a28adae3ae758cdffc889d681b3cdefe24351c32
 vendor/lib/libllvm-qcom.so;DISABLE_DEPS|3079ae9049c8758664e6ade78837e0fc6c2272d5
 vendor/lib/libOpenCL.so;DISABLE_DEPS|9ee3900265f9b855f526c0ce4fcfdaed51d62003
-vendor/lib/librs_adreno_sha1.so|28201ce01c442df4389273245be313ff4a741d6e
-vendor/lib/librs_adreno.so;DISABLE_CHECKELF|9f0022a5c38a676a580511749bab3c538ed8b803
-vendor/lib/libRSDriver_adreno.so;DISABLE_DEPS|51e8ebcd4584726cbee21a4486b6f37ce5e716f1
 vendor/lib/libscalar.so;DISABLE_DEPS|7ac579768ffd2caee903d69d8fd3f7918b04ffbe
 vendor/lib64/egl/eglSubDriverAndroid.so;DISABLE_DEPS|8edb19893decd259ba43d752b48e0a69c5788db4
 vendor/lib64/egl/libEGL_adreno.so;DISABLE_DEPS|c97c8e14d26f53398c50122daf80a599f077398a
@@ -592,7 +584,6 @@ vendor/lib64/egl/libq3dtools_adreno.so;DISABLE_DEPS;DISABLE_CHECKELF|8f6043f22c2
 vendor/lib64/egl/libq3dtools_esx.so;DISABLE_DEPS;DISABLE_CHECKELF|4f9b2bb6f492ea05b3da17b68e02effe611de0e8
 vendor/lib64/egl/libQTapGLES.so;DISABLE_DEPS|104e9cec67678174b92a698849aa2bcf52ba46ce
 vendor/lib64/libadreno_utils.so;DISABLE_DEPS|04b3878ea84a99f133934580adfd6905f6cc102b
-vendor/lib64/libbccQTI.so;DISABLE_DEPS|e79ba0450ce215bfb81e518cce310f378314b4e5
 vendor/lib64/libC2D2.so;DISABLE_DEPS|ff2d4947c7924376ff66517461246d238e221e05
 vendor/lib64/libc2d30_bltlib.so;DISABLE_DEPS;DISABLE_CHECKELF|644a88f490cc883492d94b9f581127fb33f51415
 vendor/lib64/libCB.so;DISABLE_DEPS;DISABLE_CHECKELF|df167809abe16674a61742ba6efb208edd069a3b
@@ -601,9 +592,6 @@ vendor/lib64/libhdr_tm.so;DISABLE_DEPS|c388a9b14966583cde2c682c129fcf5cfa298239
 vendor/lib64/libllvm-glnext.so;DISABLE_DEPS|dad8139672a9dcff4270a58599aa1b72d13e62fc
 vendor/lib64/libllvm-qcom.so;DISABLE_DEPS|88f4199538ce887c91936bf70eef31615c938aa2
 vendor/lib64/libOpenCL.so;DISABLE_DEPS|84c7d8be13885c9346f73c09aaaedc3bce7667d9
-vendor/lib64/librs_adreno_sha1.so|f9d28682f9c219dfe086da9f3a15aaddbcd38a05
-vendor/lib64/librs_adreno.so;DISABLE_CHECKELF|e41149794e719c7f743c4d800def68a5c8e5f9ca
-vendor/lib64/libRSDriver_adreno.so;DISABLE_DEPS|e7628b78d034500c64d09fcaf5305971242e1acd
 vendor/lib64/libscalar.so;DISABLE_DEPS|b7feb3266d5bccab8b26c49eea6ac8e295192f9a
 
 # Graphics - SDM - from miui_DAISYGlobal_V11.0.2.0.QDLMIXM_d59f395371_10.0
@@ -652,7 +640,6 @@ vendor/lib/libOmxDsdDec.so|57760dbfd7098d5f1c1c8fb12973f715ba30aac6
 vendor/lib/libOmxEvrcDec.so|20a6be418df26f48751b4178f5642e3fc6902690
 vendor/lib/libOmxG711Dec.so|da79b377947eeeb843b028ac3272a81f2be6a5f1
 vendor/lib/libOmxQcelp13Dec.so|27a75185e62e88ea84ac2448a3842c998899ae90
-vendor/lib/libOmxVideoDSMode.so;DISABLE_DEPS|84a6b99f5ad0c7dbe827eb01258cca4c790c0fe7
 vendor/lib/libOmxWmaDec.so|c3da756ae14234ae8e56cbc0b32249fbd4c8746a
 vendor/lib/libvqzip.so;DISABLE_DEPS|24e5eb30e5a2cdb544c8688d81d7cc75a1d85eaf
 -vendor/lib64/libgpustats.so;DISABLE_DEPS|a899ae72983277442cdacf8f43271986c91ce710
@@ -686,10 +673,11 @@ vendor/lib64/libqti-perfd-client.so;DISABLE_DEPS
 vendor/lib64/libqti-perfd.so;DISABLE_DEPS
 vendor/lib64/libqti-util.so;DISABLE_DEPS
 
-# Peripheral manager
-vendor/bin/pm-proxy;DISABLE_DEPS
-vendor/bin/pm-service;DISABLE_DEPS
-vendor/lib64/libperipheral_client.so;DISABLE_DEPS
+# Peripheral manager - from daisy - QKQ1.191002.002
+vendor/bin/pm-proxy;DISABLE_DEPS|1f216a6f54e9b97c026f3f3bc4d7d441d58d90a7
+vendor/bin/pm-service;DISABLE_DEPS|8a521f14576d0d2edf03b4500a54379d37e15d4e
+vendor/lib/libperipheral_client.so;DISABLE_DEPS|b75a6adac094ddcd6ded9415cae83e18d1e7e5d0
+vendor/lib64/libperipheral_client.so;DISABLE_DEPS|20c8ab21fe28e41f60b59af0ba72de9f6b1996d2
 
 # Postprocessing - from miui_DAISYGlobal_V11.0.2.0.QDLMIXM_d59f395371_10.0
 vendor/bin/hw/vendor.display.color@1.0-service;DISABLE_DEPS|dd461fbbbdc7175b8e1e37eba19bc1c48111b5b6
@@ -958,3 +946,7 @@ etc/firmware/tp/fw_synaptics_touchkey.img
 
 # Wifi
 vendor/bin/cnss-daemon;DISABLE_DEPS
+
+# HIDL libs the vendor services need in the vendor namespace
+lib64/vendor.oneplus.hardware.param@1.0.so:vendor/lib64/vendor.oneplus.hardware.param@1.0.so;DISABLE_DEPS;MODULE_SUFFIX=_vendor
+lib64/vendor.qti.imsrtpservice@1.0.so:vendor/lib64/vendor.qti.imsrtpservice@1.0.so;DISABLE_DEPS;MODULE_SUFFIX=_vendor

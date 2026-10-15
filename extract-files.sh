@@ -68,7 +68,7 @@ function blob_fixup() {
         product/lib64/libdpmframework.so)
             sed -i "s/libhidltransport.so/libcutils-v29.so\x00\x00\x00/" "${2}"
             ;;
-        lib64/vendor.oneplus.fingerprint.extension@1.0.so|lib64/vendor.oneplus.hardware.ifaa@2.0.so|lib64/vendor.oneplus.hardware.param@1.0.so|lib64/vendor.qti.imsrtpservice@1.0.so|product/lib64/com.qualcomm.qti.ant@1.0.so)
+        lib64/vendor.oneplus.fingerprint.extension@1.0.so|lib64/vendor.oneplus.hardware.ifaa@2.0.so|lib64/vendor.oneplus.hardware.param@1.0.so|lib64/vendor.qti.imsrtpservice@1.0.so|product/lib64/com.qualcomm.qti.ant@1.0.so|vendor/lib64/vendor.oneplus.hardware.param@1.0.so|vendor/lib64/vendor.qti.imsrtpservice@1.0.so)
             ;&
         vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|vendor/bin/hw/vendor.display.color@1.0-service)
             ;&
@@ -93,11 +93,13 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
             ;;
         vendor/lib/libwvhidl.so)
-            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v28.so" "${2}"
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-v28.so" "libprotobuf-cpp-lite-v29.so" "${2}"
             grep -q "libcrypto_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
             ;;
         vendor/lib64/libsettings.so)
-            "${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v28.so" "${2}"
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so" "${2}"
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-full-v28.so" "libprotobuf-cpp-full-v29.so" "${2}"
             ;;
     esac
 }
