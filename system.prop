@@ -194,3 +194,6 @@ ro.vendor.display.paneltype=1
 ro.vendor.display.foss=1
 vendor.display.foss.config=1
 vendor.display.foss.config_path=/vendor/etc/FOSSConfig.xml
+
+# USB
+sys.usb.controller=6a00000.dwc3
