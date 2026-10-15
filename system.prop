@@ -25,7 +25,6 @@ debug.sf.hw=1
 debug.sf.latch_unsignaled=1
 debug.egl.hw=1
 debug.gralloc.enable_fb_ubwc=1
-dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 debug.sf.recomputecrop=0
@@ -71,16 +70,12 @@ mm.enable.smoothstreaming=true
 audio.offload.min.duration.secs=30
 
 #enable offload audio video playback by default
-audio.offload.video=true
 
 #enable music through deep buffer
-audio.deep_buffer.media=true
 
 #set AudioFlinger client heap size
-ro.af.client_heap_size_kbyte=7168
 
 # Reduce client buffer size for fast audio output tracks
-af.fast_track_multiplier=1
 
 #185971 is decimal sum of supported parsers in AAL
 #37491 is decimal sum of supported codecs in AAL
@@ -187,7 +182,6 @@ persist.vendor.radio.start_ota_daemon=1
 
 #VENDOR_EDIT chenzhongping add it
 persist.vendor.radio.ignore_dom_time=10
-persist.vendor.radio.rat_on=combine
 persist.data.iwlan.enable=true
 persist.vendor.radio.data_ltd_sys_ind=1
 persist.vendor.radio.data_con_rprt=1
