@@ -963,3 +963,7 @@ vendor/app/TimeService/TimeService.apk|27f9b81621c446baa8c37581d9bfbca2fd67b496
 -vendor/bin/time_daemon;DISABLE_DEPS|75b8a6a14cfb4424499ccb2bf1cad011df295d0e
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 -vendor/lib64/libtime_genoff.so;DISABLE_DEPS|06df52867790cdbbcc674a3a28d7ad7c8cc161ac
+
+# CACert - from OnePlus 5, serves vendor.qti.hardware.cacert for xtra-daemon
+vendor/app/CACertService/CACertService.apk|f5396931385d4e07045a69443548e6b815df283e
+vendor/lib64/libjnihelper.so;DISABLE_DEPS|27ca93bf0e40267d0a077c906a6d9409f50254bb

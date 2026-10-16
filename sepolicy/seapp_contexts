@@ -1,2 +1,5 @@
 # uceShimService
 user=system seinfo=platform name=.dataservices domain=vendor_dataservice_app type=radio_data_file
+
+# CACertService runs with the phone shared uid
+user=radio seinfo=platform name=.qtidataservices domain=qtidataservices_app type=radio_data_file
