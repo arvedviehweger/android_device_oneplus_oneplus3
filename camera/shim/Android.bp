@@ -4,7 +4,7 @@
 //
 
 cc_library_shared {
-    name: "libcamera_metadata_shim",
+    name: "libcamera_client_vendor",
     vendor: true,
     srcs: ["CameraMetadata.cpp"],
     include_dirs: ["frameworks/av/camera/include"],

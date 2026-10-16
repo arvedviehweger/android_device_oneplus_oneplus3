@@ -76,7 +76,7 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
             ;;
         vendor/lib/hw/camera.msm8996.so)
-            "${PATCHELF}" --replace-needed "libcamera_client.so" "libcamera_metadata_shim.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcamera_client.so" "libcamera_client_vendor.so" "${2}"
             "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
             "${PATCHELF}" --remove-needed "libcameraservice.so" "${2}"
             ;;
