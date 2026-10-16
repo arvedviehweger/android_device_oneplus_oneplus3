@@ -153,6 +153,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5:64 \
     libcamera_client_vendor \
+    libui_shim.vendor \
     libgui_vendor \
     libion.vendor \
     libstdc++_vendor

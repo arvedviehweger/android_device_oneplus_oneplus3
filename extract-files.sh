@@ -84,6 +84,10 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
+        vendor/lib/libmms_hal_vstab.so|vendor/lib/libmms_warper_vstab.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
+            ;;
         vendor/bin/pm-service)
             grep -q "libutils-v33.so" "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
             ;;
@@ -94,7 +98,7 @@ function blob_fixup() {
             "${PATCHELF}" --set-soname "vulkan.msm8996.so" "${2}"
             sed -i "s/vulkan.msm8953.so/vulkan.msm8996.so/g" "${2}"
             ;;
-        vendor/lib/libmmcamera_hdr_gb_lib.so|vendor/lib/libmms_hal_vstab.so|vendor/lib/libmms_warper_vstab.so|vendor/lib/libmorpho_image_stab4.so|vendor/lib/libSonyIMX298PdafLibrary.so|vendor/lib64/libremosaiclib.so)
+        vendor/lib/libmmcamera_hdr_gb_lib.so|vendor/lib/libmorpho_image_stab4.so|vendor/lib/libSonyIMX298PdafLibrary.so|vendor/lib64/libremosaiclib.so)
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
         vendor/lib/libmmcamera2_stats_modules.so)
