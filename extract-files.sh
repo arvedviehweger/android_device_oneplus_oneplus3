@@ -88,6 +88,9 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
             ;;
+        vendor/lib/libmmcamera2_sensor_modules.so)
+            sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "${2}"
+            ;;
         vendor/bin/pm-service)
             grep -q "libutils-v33.so" "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
             ;;
