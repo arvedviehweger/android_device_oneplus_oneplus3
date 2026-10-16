@@ -1,0 +1,2 @@
+# The IPC router only lets processes with NET_RAW or NET_BIND_SERVICE bind
+allow vendor_per_mgr self:capability net_bind_service;

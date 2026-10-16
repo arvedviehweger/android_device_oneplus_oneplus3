@@ -119,6 +119,7 @@ service vendor.per_mgr /vendor/bin/pm-service
     class core
     user system
     group system
+    capabilities NET_BIND_SERVICE
     ioprio rt 4
     writepid /dev/cpuset/system-background/tasks
 
@@ -126,6 +127,7 @@ service vendor.per_proxy /vendor/bin/pm-proxy
     class core
     user system
     group system
+    capabilities NET_BIND_SERVICE
     disabled
     writepid /dev/cpuset/system-background/tasks
 
