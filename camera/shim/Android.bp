@@ -1,0 +1,19 @@
+//
+// SPDX-FileCopyrightText: 2025 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libcamera_metadata_shim",
+    vendor: true,
+    srcs: ["CameraMetadata.cpp"],
+    include_dirs: ["frameworks/av/camera/include"],
+    shared_libs: [
+        "libbinder",
+        "libcamera_metadata",
+        "libcutils",
+        "liblog",
+        "libutils",
+    ],
+    cflags: ["-Wno-unused-parameter"],
+}

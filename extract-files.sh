@@ -72,8 +72,17 @@ function blob_fixup() {
             ;&
         vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|vendor/bin/hw/vendor.display.color@1.0-service)
             ;&
-        vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|vendor/lib64/vendor.qti.gnss@*.so|vendor/lib64/vendor.qti.hardware.soter@1.0.so)
+        vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|vendor/lib64/vendor.qti.hardware.soter@1.0.so)
             "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+            ;;
+        vendor/lib/hw/camera.msm8996.so)
+            "${PATCHELF}" --replace-needed "libcamera_client.so" "libcamera_metadata_shim.so" "${2}"
+            "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
+            "${PATCHELF}" --remove-needed "libcameraservice.so" "${2}"
+            ;;
+        vendor/lib/libFNVfbEngineHAL.so)
+            "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
         vendor/bin/pm-service)
             grep -q "libutils-v33.so" "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
